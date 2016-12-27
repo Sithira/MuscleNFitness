@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 
 Route::resource('/members', 'MemberController');
+
+Route::post('/make-payment','PaymentController@store');
+
+Route::post('/add-measurement', 'MeasurementController@store');
+
+Route::resource('/members/{member}/schedule', 'ScheduleController');
