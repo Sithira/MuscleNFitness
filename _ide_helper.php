@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.3.28 on 2016-12-24.
+ * Generated for Laravel 5.3.28 on 2016-12-25.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12809,6 +12809,76 @@ namespace {
          */
         public static function componentCall($method, $parameters){
             return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
+        }
+        
+    }
+
+
+    class Flash extends \CodeZero\Flash\Facade\Flash{
+        
+        /**
+         * Flash an info message.
+         *
+         * @param string $message
+         * @param array $placeholders
+         * @param bool $dismissible
+         * @return $this 
+         * @static 
+         */
+        public static function info($message, $placeholders = array(), $dismissible = true){
+            return \CodeZero\Flash\Flash::info($message, $placeholders, $dismissible);
+        }
+        
+        /**
+         * Flash a success message.
+         *
+         * @param string $message
+         * @param array $placeholders
+         * @param bool $dismissible
+         * @return $this 
+         * @static 
+         */
+        public static function success($message, $placeholders = array(), $dismissible = true){
+            return \CodeZero\Flash\Flash::success($message, $placeholders, $dismissible);
+        }
+        
+        /**
+         * Flash a warning message.
+         *
+         * @param string $message
+         * @param array $placeholders
+         * @param bool $dismissible
+         * @return $this 
+         * @static 
+         */
+        public static function warning($message, $placeholders = array(), $dismissible = true){
+            return \CodeZero\Flash\Flash::warning($message, $placeholders, $dismissible);
+        }
+        
+        /**
+         * Flash an error message.
+         *
+         * @param string $message
+         * @param array $placeholders
+         * @param bool $dismissible
+         * @return $this 
+         * @static 
+         */
+        public static function error($message, $placeholders = array(), $dismissible = true){
+            return \CodeZero\Flash\Flash::error($message, $placeholders, $dismissible);
+        }
+        
+        /**
+         * Flash an overlay message.
+         *
+         * @param string $message
+         * @param string $title
+         * @param array $placeholders
+         * @return $this 
+         * @static 
+         */
+        public static function overlay($message, $title = 'Info', $placeholders = array()){
+            return \CodeZero\Flash\Flash::overlay($message, $title, $placeholders);
         }
         
     }

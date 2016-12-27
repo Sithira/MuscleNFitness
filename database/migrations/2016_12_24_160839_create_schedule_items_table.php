@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
-class CreateScheduleDaysTable extends Migration
+class CreateScheduleItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateScheduleDaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('schedule_days', function (Blueprint $table) {
+        Schema::create('schedule_items', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('schedule_id');
             $table->foreign('schedule_id')->references('id')->on('schedules')->onDelete('cascade');
@@ -31,6 +31,6 @@ class CreateScheduleDaysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schedule_days');
+        Schema::dropIfExists('schedule_items');
     }
 }
