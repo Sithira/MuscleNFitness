@@ -97,7 +97,7 @@
         <h4>Member Measurements</h4>
 
         <div style="overflow: hidden; margin-bottom: 20px">
-            <a class="btn btn-primary btn-sm pull-right" data-toggle="modal" href="#addschedule">Add Schedule</a>
+            <a class="btn btn-primary btn-sm pull-right" data-toggle="modal" href="#addmeasurements">Add Schedule</a>
         </div>
 
         <?php $append = "";?>
